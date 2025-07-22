@@ -1,46 +1,4 @@
-# Set
-a = {1, 2, 3}
-b = {2, 3, 4}
-print(a | b) #합집합
-print(a & b) #교집합
-print(a - b) #차집합
-print(a ^ b) #대칭차집합, a, b 각자에만 있는 것 == 겹치지 않는 부분
-
-e = {1, 2}
-f = {2, 1}
-
-print(e == f)
-
-g = {1, 2}
-h = {1, 2, 3, 4}
-print(g < h)
-
-# Dictionary - key:value 쌍으로 저장
-# 리스트로 저장할 수 있는 모든 데이터는 딕셔너리로 표현할 수 있다.
-# -> 리스트: 순서로 표현하면 더 좋을 때
-# -> 딕셔너리: 순서가 없고, key 값을 통한 조회가 많을 때
-
-di = {}
-
-person = {'name': '이강우',
-          'age' : 26,
-          }
-# list, set, dict 등 가변한 자료형은 key로 설정 불가
-
-di['이름'] = 'value'
-# 한번에 여러개 key value 넣는 건 불가 >> 나중에 tuple 머시기로 가능하다고 함
-key = '이름'
-print(di[key])
-
-# 없는 키 값을 조회하면 다 에러남
-# 키 값이 유무 검사
-print(di.get('이름')) # 있으면 value 출력
-print(di.get('non')) # 없으면 None 출력
-
-
-
-# List
-numbers = []# 비어있는 set 정의
+# 비어있는 set 정의
 c = set()
 d = {}
 print(type(c))
@@ -138,6 +96,3 @@ print(numbers[0])
 print(numbers[-1])
 print(numbers[0:2])
 print(numbers[1::2])
-
-numbers.pop() # 맨 뒤의 데이터를 빼서 삭제하는 기능
-print(numbers)
