@@ -14,10 +14,10 @@ def func():
 #  - 다음 호출
 #  - 돌아왔을 때
 
-# ex) 1 2 3 4 5 4 3 2 1 출력하는 함수
+# ex) 1 2 3 4 5 5 4 3 2 1 출력하는 함수
 
 def recur(num):
-    if num == 5:
+    if num == 6:
         print(num, end=' ')
         return
 
