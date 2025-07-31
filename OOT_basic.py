@@ -43,7 +43,7 @@ character2.attack()
 # print(f'전체 캐릭터 수 = {character1.total_players}')
 print(f'전체 캐릭터 수 = {Character.total_players}')
 
-# 내일 배울 것: 상속
+# 상속
 class Warrior(Character):
     def 강하게때리기(self):
         pass
@@ -59,6 +59,3 @@ class Archer:
 
 class Wizard:
     pass
-
-# 내일 실습 할 것 : 인스턴스 메서드 추가해보기, 클래스 메서드, 스태틱 메서드
-# - 상속 실습
