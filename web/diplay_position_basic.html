@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      margin: 20px;
+      /* 기준이 없으면 밀지 않는다. */
+      /* top: 300px; */
+    }
+
+    span {
+      margin: 20px;
+    }
+
+    a {
+      /* inline 속성을 block 처럼 쓰고 싶다 */
+      display: inline-block;
+      margin: 20px;
+    }
+
+    .my-fixed {
+      position: fixed;
+      top: 0;
+      right: 10px;
+    }
+
+    /* normal flow 로 배치가 되다가 */
+    /* 스크롤이 내려가면 fixed 처럼 동작 */
+    .my-sticky {
+      position: sticky;
+      background-color: #f0f0f0;
+      top: 50px;
+    }
+
+    .my-relative {
+      /* relative : normal flow 처럼 쓰는데 */
+      /* 얘만 left, right, top, bottom 같은 걸 쓰고 싶다 */
+      position: relative;
+      background-color: gray;
+      left: 50px;
+    }
+
+    /* 부모 요소 중 가장 가까운 relative를 
+    기준으로 배치되는 것 */
+    /* 아무것도 없이 absolute 를 쓰면 -> 브라우저를 기준으로 배치 */
+    .my-absolute {
+      margin: 0;
+      /* 부모 relative 요소의 margin 은 고려하지 않는다 */
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- 마진 상쇄는 block 속성끼리만 발생한다 -->
+  <div>div 태그</div>
+  <div class="my-sticky">div 태그 -sticky111</div>
+  <a href="">a태그</a>
+  <a href="">a태그</a>
+  <div class="my-sticky">div 태그 -sticky222</div>
+  <div class="my-fixed">fixed요소</div>
+
+  <div class="my-relative">
+    relative div 태그
+    <div class="my-absolute">div 태그</div>
+  </div>
+
+  <br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
+</body>
+</html>

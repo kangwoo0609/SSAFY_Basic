@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      border: 3px solid blue;
+    }
+
+    input:focus {
+      outline: none;
+      border: 1px solid red;
+    }
+
+    button:hover {
+      color: red;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <form action="">
+    <div>
+      <label for="username">USERNAME : </label>
+      <input 
+        type="text" 
+        id="username"
+        placeholder="아이디 입력해라"
+      >
+    </div>
+
+    <div>
+      <label for="password">PWD : </label>
+      <input type="password" id="password">
+      <button>로그인</button>
+    </div>
+
+  </form>
+</body>
+</html>
