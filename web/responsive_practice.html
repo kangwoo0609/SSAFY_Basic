@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .my-box {
+      margin-top: 100px;
+      margin-left: 50px;
+      margin-right: 50px;
+
+      border: 1px solid #000;
+      height: 100px;
+    }
+
+    /* 400px 이하인 땐 화면 출력하지마라 */
+    @media screen and (max-width: 400px) {
+      body > * {
+        display: none;
+      }
+
+      body::before {
+        content: "마 화면 키아라";
+      }
+    }
+
+    /* 500px 이하이면 box 를 빨간색 */
+    /* 이상: min */
+    /* 이하: max */
+    @media screen and (min-width: 500px) {
+      .my-box {
+        background-color: red;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      .my-box {
+        background-color: orange;
+      }
+    }
+
+    @media screen and (min-width: 700px) {
+      .my-box {
+        background-color: yellow;
+      }
+    }
+
+    @media screen and (min-width: 800px) {
+      .my-box {
+        background-color: green;
+      }
+    }
+
+    p::before {
+      content: "👉 "
+    }
+
+    p::after {
+      content: " 👈"
+    }
+
+    p::selection {
+      background: skyblue;
+      color: red;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="my-box"></div>
+  <p>테스트테스트테스트테스트</p>
+  <p>테스트테스트테스트</p>
+  <p>테스트테스트</p>
+</body>
+
+</html>
